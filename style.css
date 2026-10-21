@@ -1,0 +1,1150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #102a43;
+    background: white;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 75px;
+    margin: auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 700;
+    color: #102a43;
+}
+
+.logo span {
+    color: #16a085;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #16a085;
+}
+
+.nav-btn {
+    padding: 11px 19px;
+
+    background: #16a085;
+    color: white;
+
+    border-radius: 10px;
+}
+
+.nav-btn:hover {
+    background: #117864;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+
+    background: linear-gradient(
+        120deg,
+        #eafcff,
+        #f6fffa
+    );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 70px max(
+        25px,
+        calc((100% - 1200px) / 2)
+    );
+
+    gap: 40px;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline {
+    color: #16a085;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(
+        44px,
+        6vw,
+        75px
+    );
+
+    line-height: 1.05;
+
+    margin: 15px 0 20px;
+}
+
+.hero h1 span {
+    color: #16a085;
+}
+
+.hero-text {
+    max-width: 550px;
+
+    color: #52606d;
+
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border: 0;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: #16a085;
+    color: white;
+}
+
+.primary:hover {
+    background: #117864;
+
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background: white;
+
+    color: #16a085;
+
+    border: 2px solid #16a085;
+}
+
+.secondary:hover {
+    background: #e8f8f5;
+}
+
+.hero-stats {
+    display: flex;
+
+    gap: 35px;
+
+    margin-top: 25px;
+}
+
+.hero-stats div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-size: 25px;
+}
+
+.hero-stats span {
+    color: #627d98;
+
+    font-size: 12px;
+}
+
+
+
+/* ================= SCOOTER DESIGN ================= */
+
+.hero-scooter {
+    position: relative;
+
+    width: 470px;
+    height: 360px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.glow {
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    background: #c8f7ea;
+
+    border-radius: 50%;
+}
+
+.scooter-art {
+    width: 330px;
+    height: 190px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.stem {
+    position: absolute;
+
+    width: 13px;
+    height: 140px;
+
+    background: #102a43;
+
+    left: 205px;
+    top: 18px;
+
+    transform: rotate(10deg);
+
+    border-radius: 10px;
+}
+
+.handle {
+    position: absolute;
+
+    width: 80px;
+    height: 11px;
+
+    background: #102a43;
+
+    left: 188px;
+    top: 13px;
+
+    border-radius: 10px;
+}
+
+.deck {
+    position: absolute;
+
+    width: 210px;
+    height: 18px;
+
+    background: #16a085;
+
+    left: 50px;
+    top: 145px;
+
+    border-radius: 15px;
+
+    transform: rotate(-3deg);
+}
+
+.front-wheel,
+.back-wheel {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    background: #102a43;
+
+    border: 8px solid white;
+
+    border-radius: 50%;
+
+    top: 145px;
+}
+
+.front-wheel {
+    left: 260px;
+}
+
+.back-wheel {
+    left: 30px;
+}
+
+.light {
+    position: absolute;
+
+    width: 18px;
+    height: 12px;
+
+    background: #ffe066;
+
+    border-radius: 10px;
+
+    left: 257px;
+    top: 125px;
+}
+
+.road {
+    position: absolute;
+
+    width: 430px;
+    height: 5px;
+
+    background: #9fb3c8;
+
+    bottom: 45px;
+
+    border-radius: 10px;
+}
+
+
+
+/* ================= GENERAL SECTION ================= */
+
+.section {
+    padding: 85px 25px;
+
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+.light-section {
+    max-width: none;
+
+    background: #f7fbfa;
+
+    padding-left: max(
+        25px,
+        calc((100% - 1200px) / 2)
+    );
+
+    padding-right: max(
+        25px,
+        calc((100% - 1200px) / 2)
+    );
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    color: #16a085;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+}
+
+.section-heading h2 {
+    font-size: clamp(
+        30px,
+        4vw,
+        44px
+    );
+
+    margin: 5px 0;
+}
+
+.section-heading span {
+    color: #627d98;
+}
+
+
+
+/* ================= SCOOTER CARDS ================= */
+
+.scooter-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.scooter-card {
+    position: relative;
+
+    padding: 32px;
+
+    border-radius: 20px;
+
+    border: 1px solid #d9e2ec;
+
+    background: white;
+
+    box-shadow:
+        0 10px 25px
+        rgba(16, 42, 67, 0.07);
+
+    transition: 0.3s;
+}
+
+.scooter-card:hover {
+    transform: translateY(-8px);
+}
+
+.scooter-card.featured {
+    border: 2px solid #16a085;
+}
+
+.scooter-icon {
+    width: 65px;
+    height: 65px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #e8f8f5;
+
+    font-size: 32px;
+}
+
+.badge {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #dff7ef;
+
+    color: #117864;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.scooter-card h3 {
+    font-size: 24px;
+
+    margin: 18px 0 5px;
+}
+
+.scooter-card > p {
+    color: #627d98;
+
+    min-height: 52px;
+}
+
+.scooter-card ul {
+    list-style: none;
+
+    margin: 20px 0;
+}
+
+.scooter-card li {
+    margin: 8px 0;
+
+    color: #334e68;
+}
+
+.scooter-card li::before {
+    content: "✓";
+
+    color: #16a085;
+
+    font-weight: bold;
+
+    margin-right: 8px;
+}
+
+.price {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.price small {
+    font-size: 13px;
+
+    color: #627d98;
+
+    font-weight: 400;
+}
+
+.card-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #102a43;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+}
+
+.card-btn:hover {
+    background: #16a085;
+}
+
+
+
+/* ================= SERVICES ================= */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #d9e2ec;
+
+    text-align: center;
+}
+
+.service-icon {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    color: #627d98;
+}
+
+
+
+/* ================= BOOKING ================= */
+
+.booking-section {
+    max-width: none;
+
+    background: #102a43;
+
+    color: white;
+
+    padding-left: max(
+        25px,
+        calc((100% - 1150px) / 2)
+    );
+
+    padding-right: max(
+        25px,
+        calc((100% - 1150px) / 2)
+    );
+}
+
+.booking-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.booking-info > p:first-child {
+    color: #5ed6b8;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.booking-info h2 {
+    font-size: clamp(
+        32px,
+        4vw,
+        48px
+    );
+
+    margin: 10px 0 20px;
+}
+
+.booking-info > p {
+    color: #d9e2ec;
+}
+
+.booking-points {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    color: #d9e2ec;
+}
+
+.booking-form {
+    background: white;
+
+    color: #102a43;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.2);
+}
+
+.booking-form label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin: 12px 0 6px;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #bcccdc;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: #16a085;
+}
+
+.full-btn {
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+.form-message {
+    margin-top: 12px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    color: #16a085;
+}
+
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image {
+    min-height: 380px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7faf4,
+            #dff5ff
+        );
+
+    border-radius: 30px;
+
+    display: grid;
+
+    place-items: center;
+}
+
+.about-circle {
+    width: 190px;
+    height: 190px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 80px;
+
+    box-shadow:
+        0 15px 30px
+        rgba(16, 42, 67, 0.12);
+}
+
+.about-content > p:first-child {
+    color: #16a085;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.about-content h2 {
+    font-size: clamp(
+        32px,
+        4vw,
+        48px
+    );
+
+    margin: 8px 0 18px;
+}
+
+.about-content > p {
+    color: #627d98;
+}
+
+.about-list {
+    margin-top: 25px;
+
+    display: grid;
+
+    gap: 10px;
+
+    font-weight: 500;
+}
+
+
+
+/* ================= REVIEWS ================= */
+
+.review-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.review-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #d9e2ec;
+
+    text-align: center;
+}
+
+.stars {
+    color: #f4b400;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    color: #627d98;
+}
+
+.review-card h4 {
+    margin-top: 20px;
+}
+
+.review-card span {
+    color: #829ab1;
+
+    font-size: 13px;
+}
+
+
+
+/* ================= CONTACT ================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+.contact-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #d9e2ec;
+
+    text-align: center;
+}
+
+.contact-card div {
+    font-size: 32px;
+}
+
+.contact-card h3 {
+    margin: 10px 0 5px;
+}
+
+.contact-card p {
+    color: #627d98;
+}
+
+.contact-form {
+    max-width: 800px;
+
+    margin: auto;
+
+    display: grid;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #bcccdc;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #16a085;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #0b1f33;
+
+    color: white;
+
+    padding: 45px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.footer .logo {
+    color: white;
+}
+
+.footer p {
+    color: #9fb3c8;
+
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 20px;
+
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #5ed6b8;
+}
+
+.copyright {
+    width: 100%;
+
+    text-align: center;
+
+    border-top: 1px solid #29445d;
+
+    padding-top: 20px;
+}
+
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 950px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .hero-buttons,
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-scooter {
+        width: 100%;
+    }
+
+    .scooter-grid,
+    .review-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .service-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .booking-container,
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .menu-btn {
+        display: block;
+
+        order: 3;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        background: white;
+
+        padding: 20px 25px;
+
+        box-shadow:
+            0 10px 15px
+            rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-stats {
+        gap: 18px;
+
+        flex-wrap: wrap;
+    }
+
+    .hero-scooter {
+        height: 280px;
+
+        transform: scale(0.82);
+    }
+
+    .section {
+        padding-top: 60px;
+
+        padding-bottom: 60px;
+    }
+
+    .scooter-grid,
+    .service-grid,
+    .review-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-points {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-container {
+        gap: 35px;
+    }
+
+    .footer {
+        text-align: center;
+
+        justify-content: center;
+    }
+
+    .footer-links {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+}
